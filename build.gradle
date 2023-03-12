@@ -5,6 +5,7 @@ buildscript {
         coroutines_version = "1.6.4"
         retrofit_version = "2.9.1"
         koin_version = koin_version = "3.3.2"
+        coil_version = "2.2.2"
 
     }
 }

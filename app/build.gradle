@@ -53,12 +53,19 @@ dependencies {
      *  Coroutines
      */
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    /**
+     *  Coil for loading image
+     *
+     */
 
+    implementation "io.coil-kt:coil:$coil_version"
     /**
      * Koin for DI
      */
 
     implementation "io.insert-koin:koin-android:$koin_version"
+
+
 
 
 }
