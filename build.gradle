@@ -7,6 +7,9 @@ buildscript {
         koin_version = koin_version = "3.3.2"
         coil_version = "2.2.2"
         converter_gson = "2.9.0"
+        logging_interceptor = "4.9.3"
+
+
 
     }
 }
