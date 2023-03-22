@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("api/https://api.thecatapi.com/v1/images/search?limit=1")
-    suspend fun getRandomCatImage() : Response<CatImageResponse>
+    suspend fun getRandomCatImage(): Response<CatImageResponse>
 }
