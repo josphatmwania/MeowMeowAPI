@@ -54,6 +54,13 @@ dependencies {
     implementation "com.squareup.retrofit2:$converter_gson"
     implementation "com.squareup.okhttp3:$logging-interceptor"
 
+    // RxJava adapter for retrofit
+    implementation "com.squareup.retrofit2:$adapter_rxjava"
+
+
+    // RxJava libraries
+    implementation "io.reactivex:rxjava: $reactivex_rxjava"
+    implementation "io.reactivex:rxandroid:reactivex_rxandroid"
 
 
     /**
