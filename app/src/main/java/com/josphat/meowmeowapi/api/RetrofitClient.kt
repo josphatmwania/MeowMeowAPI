@@ -1,6 +1,8 @@
 package com.josphat.meowmeowapi.api
 
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 
 
@@ -14,4 +16,19 @@ object RetrofitClient {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
+
+    fun createOkClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addInterceptor(getLoggingInterceptor())
+            .build()
+    }
+
+    private fun getLoggingInterceptor(): Interceptor {
+        val httpLoggingInterceptor = HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+        return httpLoggingInterceptor
+    }
 }
+
