@@ -37,7 +37,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -46,38 +46,40 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
-    /**
-     * Retrofit dependencies
-     */
-    implementation "com.squareup.retrofit2:$retrofit_version"
-    implementation "com.squareup.retrofit2:$converter_gson"
-    implementation "com.squareup.okhttp3:$logging-interceptor"
+    // Dagger - Hilt
 
-    // RxJava adapter for retrofit
-    implementation "com.squareup.retrofit2:$adapter_rxjava"
-
-
-    // RxJava libraries
-    implementation "io.reactivex:rxjava: $reactivex_rxjava"
-    implementation "io.reactivex:rxandroid:reactivex_rxandroid"
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
 
-    /**
-     *  Coroutines
-     */
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
-    /**
-     *  Coil for loading image
-     *
-     */
 
-    implementation "io.coil-kt:coil:$coil_version"
-    /**
-     * Koin for DI
-     */
 
-    implementation "io.insert-koin:koin-android:$koin_version"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+
+    // Kotlin components
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+
+    // networking
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+
+    // coil
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
 
 
