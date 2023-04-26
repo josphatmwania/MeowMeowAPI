@@ -24,6 +24,9 @@ object CatApiModule {
 
     }
 
+    /**
+     * The retrofit object
+     */
     @Provides
     @Singleton
     fun provideRetrofit() : Retrofit.Builder{
