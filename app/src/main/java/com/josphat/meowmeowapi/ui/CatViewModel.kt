@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class CatViewModel @Inject constructor(
     private val catRepo: CatRepo
 ) : ViewModel() {
 
