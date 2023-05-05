@@ -12,7 +12,7 @@ import com.josphat.meowmeowapi.databinding.ActivityCatBinding
 class CatActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-private lateinit var binding: ActivityCatBinding
+    private lateinit var binding: ActivityCatBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
