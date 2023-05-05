@@ -2,6 +2,7 @@ package com.josphat.meowmeowapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import com.josphat.meowmeowapi.ui.CatViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
